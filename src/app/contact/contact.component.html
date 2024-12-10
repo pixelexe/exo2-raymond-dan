@@ -1,1 +1,35 @@
-<p>contact works!</p>
+<div>
+    <form [formGroup]="formContact" (ngSubmit)="onSubmit()">
+        <table>
+            <tr>
+                <td><label for="prenom">Prénom:</label></td>
+                <td><input type="text" id="prenom" formControlName="prenom"></td>
+            </tr>
+            <tr>
+                <td><label for="nom">Nom:</label></td>
+                <td><input type="text" id="nom" formControlName="nom"></td>
+            </tr>
+            <tr>
+                <td><label for="age">Âge:</label></td>
+                <td><input type="number" id="age" formControlName="age"></td>
+            </tr>
+            <tr>
+                <td><label for="has-email">Entrer un email ?:</label></td>
+                <td><input (change)="addMailValidator()" type="checkbox" id="has-email" formControlName="hasEmail"></td>
+            </tr>
+            @if (this.formContact.getRawValue().hasEmail) {
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="text" id="email" formControlName="email"></td>
+                </tr>
+            }
+            <tr>
+                <td><label for="commentaire">Commentaires:</label></td>
+                <td><textarea id="commentaire" formControlName="commentaire"></textarea></td>
+            </tr>
+            <tr>
+                <td><button routerLink="/accueil" type="submit" [disabled]="!formContact.valid">Send</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
