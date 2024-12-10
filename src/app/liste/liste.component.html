@@ -1,1 +1,17 @@
-<p>liste works!</p>
+<div class="movie-list">
+    <ul>
+        <li (click)="setName('ryan')">Il faut sauver le soldat Ryan</li>
+        <li (click)="setName('verte')">La Ligne Verte</li>
+        <li (click)="setName('shining')">Shining</li>
+        <li (click)="setName('sw')">Star Wars III</li>
+        <li (click)="setName('chihiro')">Le voyage de Chihiro</li>
+    </ul>
+</div>
+@if (filmTitle !== '') {
+    <div class="movie-details">
+        <p>Titre : {{filmTitle}}</p> 
+        <figure>
+            <img [src]="imageURL" [alt]="'Affiche du film '+ filmTitle">
+        </figure>
+    </div>  
+}
