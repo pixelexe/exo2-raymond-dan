@@ -2,7 +2,12 @@
     display: flex;
     height: calc(100vh - 100px);
     width: 100%;
-    border: 1px solid red;
     justify-content: center;
     align-items: center;
+    
+    background-color: #202020; 
+}
+
+figure {
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.500);
 }

@@ -3,15 +3,22 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    border : 1px solid black;
+    background-color: #920101;
 }
 
-ul{
+ul {
     display: flex;
     list-style: none;
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.5em;
+    font-family: Roboto, system-ui;
+    color: whitesmoke;
 }
 
 nav{
@@ -20,5 +27,6 @@ nav{
     width: 100%;
     height: 100%;
     
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.500) ;
 }
 
