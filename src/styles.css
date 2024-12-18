@@ -5,7 +5,12 @@
     padding: 0;
     box-sizing: border-box; 
 
-    --main-bg-background :  #202020; 
+    --main-bg:  #202020; 
+    --lighter-bg: #292828;
+    --footer-bg: #333;
+
+    --main-red: #920101;
+    --disabled-red: #3f0a0a;
     
     font-family: Roboto, system-ui;
 }
