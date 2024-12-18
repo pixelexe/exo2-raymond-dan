@@ -1,0 +1,4 @@
+div {
+    background-color: var(--main-bg-background);
+    height: calc(100vh - 100px);
+}

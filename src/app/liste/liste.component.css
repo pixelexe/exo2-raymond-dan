@@ -1,8 +1,3 @@
-.list-body {
-    background-color: var(--main-bg-background);
-    height: calc(100vh - 100px);
-}
-
 .movie-list {
     display: flex;
     justify-content: space-evenly;
