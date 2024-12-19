@@ -8,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrl: './gestion.component.css'
 })
 export class GestionComponent {
+  formAnswer: any;
 
+  constructor(){
+    const formData = localStorage.getItem('formAnswer');
+    if (formData) {
+      this.formAnswer = JSON.parse(formData);
+    } else {
+      console.log(this.formAnswer);
+    }
+  }
 }

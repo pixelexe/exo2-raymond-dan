@@ -1,1 +1,24 @@
-<p>gestion works!</p>
+<div class="gestion-page">
+    <div class="gestion-body">
+        @if (this.formAnswer){
+            <div class="gestion-title">
+                <h1>Dernier formulaire contact rempli :</h1>
+            </div>
+            <div class="gestion-informations">
+                <p>{{this.formAnswer.prenom + ' ' + this.formAnswer.nom}}
+                @if (this.formAnswer.age !== 0){
+                    ({{this.formAnswer.age}})
+                }
+                </p>
+                @if (this.formAnswer.email !== ''){
+                    <p>dont le mail est {{this.formAnswer.email}}</p>
+                }
+                <p>a écrit : </p>
+                <p>{{this.formAnswer.commentaire}}</p>
+            </div>
+        } @else {
+            <h1>Aucun formulaire contact n'a été rempli</h1>
+        }
+
+    </div> 
+</div>

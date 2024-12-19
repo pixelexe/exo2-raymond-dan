@@ -17,7 +17,6 @@ export class ContactComponent {
     hasEmail: new FormControl(false),
     email: new FormControl('',  Validators.email),
     commentaire: new FormControl('', Validators.required),
-
   });
 
   addMailValidator() {
@@ -31,10 +30,25 @@ export class ContactComponent {
       this.formContact.get('email')?.setValue('');
 
     }
-    console.log(this.formContact.getRawValue());
   }
   
   onSubmit() {
+    let formData = {
+      prenom: '', 
+      nom: '',
+      age: 0,
+      email: '',
+      commentaire: '',
+    }
+
+    formData.prenom = String(this.formContact.getRawValue().prenom);
+    formData.nom = String(this.formContact.getRawValue().nom);
+    formData.age = Number(this.formContact.getRawValue().age);
+    formData.email = this.formContact.getRawValue().hasEmail ? String(this.formContact.getRawValue().email) : '';
+    formData.commentaire = String(this.formContact.getRawValue().commentaire);
+    localStorage.clear();
+    localStorage.setItem('formAnswer', JSON.stringify(formData));
+
     alert('Le formulaire est valide');
   }
 }

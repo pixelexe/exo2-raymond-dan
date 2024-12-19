@@ -1,6 +1,6 @@
 <div class="form-page">
     <h1>Formulaire de Contact</h1>
-    <form [formGroup]="formContact" (ngSubmit)="onSubmit()">
+    <form [formGroup]="formContact">
         <div class="form-body">
             <div class="form-field">
                 <label for="prenom">Prénom</label>
@@ -29,7 +29,7 @@
                 <textarea id="commentaire" formControlName="commentaire"></textarea>
             </div>
             
-            <button routerLink="/accueil" type="submit" [disabled]="!formContact.valid">Envoyer</button>
+            <button type="button" routerLink="/accueil" type="submit" [disabled]="!formContact.valid" (click)="onSubmit()">Envoyer</button>
         </div>
     </form>
 </div>
