@@ -24,7 +24,7 @@ button{
     border-radius: 15px; 
     cursor: pointer;
     border: none;
-    box-shadow: 2px 2px black;
+    box-shadow: 2px 2px var(--shadow-color);
     background-color: var(--main-red);
     color: whitesmoke;
 }

@@ -11,6 +11,8 @@
 
     --main-red: #920101;
     --disabled-red: #3f0a0a;
+
+    --shadow-color: rgba(0, 0, 0, 0.5);
     
     font-family: Roboto, system-ui;
 }
