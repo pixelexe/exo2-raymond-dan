@@ -2,11 +2,9 @@
     <div class="movie-list">
         <h1>Nos Films Préférés</h1>
         <ul>
-            <li (click)="setName('ryan')">Il faut sauver le soldat Ryan</li>
-            <li (click)="setName('verte')">La Ligne Verte</li>
-            <li (click)="setName('shining')">Shining</li>
-            <li (click)="setName('sw')">Star Wars III</li>
-            <li (click)="setName('chihiro')">Le voyage de Chihiro</li>
+            @for (film of films; track filmTitle){
+                <li (click)="setSelectedMovie(film.filmTitle, film.imageURL)">{{film.filmTitle}}</li>
+            }
         </ul>
     </div>
     <div class="movie-details">
