@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { FormData } from '../../interfaces/formData';
 
 @Component({
   selector: 'app-contact',
@@ -33,18 +34,18 @@ export class ContactComponent {
   }
   
   onSubmit() {
-    let formData = {
-      prenom: '', 
+    let formData: FormData = {
+      prenom: '',
       nom: '',
       age: 0,
-      email: '',
       commentaire: '',
-    }
+      email: null
+    };
 
     formData.prenom = String(this.formContact.getRawValue().prenom);
     formData.nom = String(this.formContact.getRawValue().nom);
     formData.age = Number(this.formContact.getRawValue().age);
-    formData.email = this.formContact.getRawValue().hasEmail ? String(this.formContact.getRawValue().email) : '';
+    formData.email = this.formContact.getRawValue().email;
     formData.commentaire = String(this.formContact.getRawValue().commentaire);
     localStorage.clear();
     localStorage.setItem('formAnswer', JSON.stringify(formData));

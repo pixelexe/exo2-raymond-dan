@@ -14,8 +14,6 @@ export class GestionComponent {
     const formData = localStorage.getItem('formAnswer');
     if (formData) {
       this.formAnswer = JSON.parse(formData);
-    } else {
-      console.log(this.formAnswer);
     }
   }
 }
