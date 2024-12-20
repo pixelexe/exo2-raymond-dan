@@ -29,7 +29,7 @@
                 <textarea id="commentaire" formControlName="commentaire"></textarea>
             </div>
             
-            <button type="button" routerLink="/accueil" type="submit" [disabled]="!formContact.valid" (click)="onSubmit()">Envoyer</button>
+            <button type="button" routerLink="/accueil" [disabled]="!formContact.valid" (click)="onSubmit()">Envoyer</button>
         </div>
     </form>
 </div>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
-import { FormData } from '../../interfaces/formData';
+import { FormData } from '../../interfaces/form-data';
 
 @Component({
   selector: 'app-contact',
@@ -14,7 +14,7 @@ export class ContactComponent {
   formContact = new FormGroup({
     prenom: new FormControl('', Validators.required),
     nom: new FormControl('', Validators.required),
-    age: new FormControl(''),
+    age: new FormControl('', Validators.min(0)),
     hasEmail: new FormControl(false),
     email: new FormControl('',  Validators.email),
     commentaire: new FormControl('', Validators.required),

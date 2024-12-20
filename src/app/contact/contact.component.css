@@ -19,7 +19,7 @@ form {
 @media screen and (min-width: 1250px) and (min-height: 800px) {
     form {
         height: 500px;
-        width:600px;
+        width: 600px;
     }
 }
 
@@ -51,6 +51,7 @@ input {
     border-radius: 5px;
     height:70%;
     padding-left: 4px;
+    width: 170px;
 }
 
 form .ng-invalid {
@@ -62,9 +63,8 @@ textarea {
     border-radius: 5px;
     padding-left: 4px;
     padding-top: 4px;
+    width: 170px;
 }
-
-
 
 button {
     background-color: var(--main-red);
