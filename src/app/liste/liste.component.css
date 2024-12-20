@@ -26,13 +26,22 @@ li {
     margin-top: 2px;
 }
 
-.poster {
-    height : 500px;
-    width: 350px;
+.poster-fig {
+    height: 90%;
+    aspect-ratio: 1 / 1.4;
+}
+.poster-img {
+    height : 100%;
+    width: 100%;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.500);
 }
 
-.icon {
-    height : 300px;
-    width: 300px;
+.icon-fig {
+    height : 50%;
+    aspect-ratio: 1 / 1;
+}
+
+.icon-img {
+    height : 100%;
+    width: 100%;
 }

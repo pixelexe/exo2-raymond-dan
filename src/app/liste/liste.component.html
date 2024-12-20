@@ -12,12 +12,12 @@
     <div class="movie-details">
     @if (filmTitle !== '') {
         <p>{{filmTitle}}</p> 
-        <figure>
-            <img class="poster" [src]="imageURL" [alt]="'Affiche du film '+ filmTitle">
+        <figure class="poster-fig">
+            <img class="poster-img" [src]="imageURL" [alt]="'Affiche du film '+ filmTitle">
         </figure>
     } @else {
-        <figure>
-            <img class="icon" src="assets/img/defaultIcon.png">
+        <figure class="icon-fig">
+            <img class="icon-img" src="assets/img/defaultIcon.png">
         </figure>
     }
 
