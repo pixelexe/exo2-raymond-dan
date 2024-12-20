@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { FormData } from '../../interfaces/form-data';
@@ -11,6 +11,9 @@ import { FormData } from '../../interfaces/form-data';
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
+
+  constructor(private cdr: ChangeDetectorRef) {}
+
   formContact = new FormGroup({
     prenom: new FormControl('', Validators.required),
     nom: new FormControl('', Validators.required),
@@ -31,6 +34,7 @@ export class ContactComponent {
       this.formContact.get('email')?.setValue('');
 
     }
+    this.cdr.detectChanges();
   }
   
   onSubmit() {
